@@ -1,0 +1,13 @@
+{
+  "name": "your-vendor/device-detector-service",
+  "description": "A Swoole-powered microservice using Matomo DeviceDetector",
+  "require": {
+    "php": ">=8.1",
+    "matomo/device-detector": "^5.0",
+    "openswoole/core": "*",
+    "doctrine/cache": "^1.12"
+  },
+  "autoload": {
+    "psr-4": { "App\\": "src/" }
+  }
+}
