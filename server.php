@@ -36,6 +36,8 @@ $server->on("request", function ($req, $res) use ($dd, $cacheTable, $ttl) {
         return $res->end('Missing "ua" query parameter');
     }
 
+    //error_log("UA: $ua", 0);
+
     $key = md5($ua);
     $entry = $cacheTable->get($key);
     if ($entry !== false && (time() - $entry['timestamp']) < $ttl) {
